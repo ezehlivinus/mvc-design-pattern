@@ -12,7 +12,4 @@ class Book extends Model {
 }
 
 
-const book = new Book('Things fall apart', 'Ezeh', 'Location');
-book.update({name: 'ezeh', age: 26});
-let b = Book.find(book.name);
-
+exports.Book = Book;

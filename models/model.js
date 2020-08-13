@@ -30,6 +30,7 @@ class Model {
     
     delete () {
         console.log('success');
+        return {status: 'success'}
     }
 
     static find (query) {
@@ -37,7 +38,7 @@ class Model {
         // that match query
         console.log(query)
         // an object of the searched resource would be returned
-        return {};
+        return {'book': `the book details: ${query}`};
     }
     
 }
