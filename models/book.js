@@ -1,15 +1,28 @@
 const { Model } = require('./model');
 
-
+/**
+ * @class Book
+ */
 class Book extends Model {
-    constructor (name, author, imprint) {
+    #isLended = false;
+    constructor (title, author, imprint) {
         super();
-        this.name = name;
+        this.title = title;
         this.author = author;
         this.imprint = imprint;
+        this.#isLended = false;
+    }
+
+    get isLended () {
+        return this.#isLended;
+    }
+
+    set isLended(value=true) {
+        this.#isLended = value;
     }
     
 }
+
 
 
 exports.Book = Book;

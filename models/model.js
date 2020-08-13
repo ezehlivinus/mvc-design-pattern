@@ -1,3 +1,9 @@
+const { books } = require('../databases/books');
+
+const db = {
+    books
+}
+
 /**
  * Abstract class Model
  * @class Model
@@ -21,8 +27,9 @@ class Model {
                 console.log(`Error: ${this.constructor.name} model does not have '${property}' property`);
                 return false;
             }
+            // do not use dot notation to avoid creating new property as object.property
+            this[ property ] = value;
 
-            this.property = value;
         }
         return this;    
     }
@@ -33,15 +40,29 @@ class Model {
         return {status: 'success'}
     }
 
+    /**
+     * This is an exact search for now
+     * @param {book-title} query
+     */
     static find (query) {
-        // I could search a database to find the resource
-        // that match query
-        console.log(query)
+
+        let collection = `${this.name.toLowerCase()}s`;
+
+        // only work for book model
+        let result = db[collection].find( ({ title }) => title.toLowerCase() === query.toLowerCase() );
+        return result;
         // an object of the searched resource would be returned
         return {'book': `the book details: ${query}`};
     }
+
+    /**
+     * @returns all collection/table
+     */
+    static all () {
+        let collection = `${this.name.toLowerCase()}s`;
+        return db[collection];
+    }
     
 }
-
 
 exports.Model = Model;
