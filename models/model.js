@@ -11,6 +11,35 @@ class Model {
 
     // other properties and methods common to all model
     
+    /**
+     * @param object the key/value pair to be updated
+     * @returns objects the objects 
+     */
+    update (object) {
+        for (let [property, value] of Object.entries(object)) {
+            if (!this.hasOwnProperty(property)) {
+                console.log(`Error: ${this.constructor.name} model does not have '${property}' property`);
+                return false;
+            }
+
+            this.property = value;
+        }
+        return this;    
+    }
+
+    
+    delete () {
+        console.log('success');
+    }
+
+    static find (query) {
+        // I could search a database to find the resource
+        // that match query
+        console.log(query)
+        // an object of the searched resource would be returned
+        return {};
+    }
+    
 }
 
 
