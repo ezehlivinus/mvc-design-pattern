@@ -40,3 +40,6 @@ Base `controller, and view` was intentionally not created. It will perhaps be cr
 ## Contributing
 It will be great if you decide to contribute to this small app and make it better. For now there is no guide line except that the coding style need to follow: Airbnb Style guide and ESlint standard.
 Just make a pull request.
+
+## Disclaimer
+Note that the data at `databases/books.js` are dummy data and not (or may not be) accurate inline with what is exists.

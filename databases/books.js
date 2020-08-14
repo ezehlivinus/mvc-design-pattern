@@ -7,8 +7,4 @@ let books = [
     {title: 'Mastery', author: 'Robert Green', imprint: 'Canada'}
 ]
 
-// books.forEach(book => {
-//     console.log(book);
-// });
-
 exports.books = books;
