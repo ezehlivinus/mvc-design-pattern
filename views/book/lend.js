@@ -1,7 +1,6 @@
 
 const { detail, list, lend } = require('../../controllers/bookController')
 
-// const 
 
 const lendABook = () => {
     let book = detail('Things fall apart');
@@ -12,7 +11,6 @@ const lendABook = () => {
 
 }
 
-var x = 1;
 
 lendABook();
 // list all books,

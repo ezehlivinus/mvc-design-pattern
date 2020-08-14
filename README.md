@@ -8,10 +8,10 @@ THIS IS A DEMO AND IT IS FOR LEARNING PURPOSE ONLY and not meant for live app.
 ## File Structure
 Project folder: mvc-design-pattern
 - controllers
-    - `bookController.js` app major login and request handler
+    - `bookController.js` book logic handler
 - models
     - `book.js` the book model
-    - `model.js` an abstract base model inheritable by other models
+    - `model.js` an abstract base model inheritable by other models. example Book...
 - views
     - book
         - `create.js`
@@ -22,12 +22,12 @@ Project folder: mvc-design-pattern
 - databases
     - `books.js`
 
-Base `controller, and view` was intentionally not created. It will perhaps be created in the future.
+Base `controller, and view` was intentionally not created. It will perhaps be created in the future. However, `model.js` is the base model for all entities like: User, Book ... on this project.
 
 ## Usage
 0. Requirements: `node.js` installed. All scripts in this project are JS. It does not require setting up a server.
 
-1. After cloning
+1. Clone or <a href="https://repl.it/@ezehlivinus/mvc-design-pattern">run online</a>
 
 2. To fetch or list all books, use the command: `node views/book/index.js`
 
@@ -38,6 +38,7 @@ Base `controller, and view` was intentionally not created. It will perhaps be cr
 5. To create a book: `node views/book/create.js`.
 
 6. To lend a book: `node views/book/lend.js`.
+
 
 
 ## Contributing

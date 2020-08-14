@@ -12,9 +12,10 @@ const newBook = () => {
     // multiple time on diff object parameters
     const response =  create(request);
 
-    console.log(response);
+    console.log('\nNew book created\n\n', response);
+    
 }
 
 newBook();
-console.log(list())
+console.log('\n\n', list())
 

@@ -19,7 +19,7 @@ class Model {
     
     /**
      * @param object the key/value pair to be updated
-     * @returns objects the objects 
+     * @returns object the object that was updated 
      */
     update (object) {
         for (let [property, value] of Object.entries(object)) {
@@ -36,6 +36,7 @@ class Model {
 
     
     delete () {
+        // not implemented yet
         console.log('success');
         return {status: 'success'}
     }
@@ -51,8 +52,6 @@ class Model {
         // only work for book model
         let result = db[collection].find( ({ title }) => title.toLowerCase() === query.toLowerCase() );
         return result;
-        // an object of the searched resource would be returned
-        return {'book': `the book details: ${query}`};
     }
 
     /**

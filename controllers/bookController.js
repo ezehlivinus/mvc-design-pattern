@@ -64,7 +64,7 @@ exports.lend = (book) => {
 
     book.isLended = true;
 
-    return book;
+    return {status: 'successfully lend', data: book};
 
 }
 
