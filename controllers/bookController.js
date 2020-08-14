@@ -59,7 +59,7 @@ exports.list = () => {
 // lend a book
 exports.lend = (book) => {
     if (book.isLended) {
-        return 'This book is available';
+        return 'This book is not available';
     }
 
     book.isLended = true;
