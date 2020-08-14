@@ -1,18 +1,20 @@
 
-const { detail, list } = require('../../controllers/bookController')
+const { detail, list, lend } = require('../../controllers/bookController')
 
+// const 
 
-const lend = () => {
-   let book = detail('things fall apart');
-   if (!book || book === undefined && book.length === 0) {
-       console.log('Not found');
-       return false;
-   }
+const lendABook = () => {
+    let book = detail('Things fall apart');
 
-   book.isLended = true;
-   console.log(book);
+    book = lend(book);
+
+    console.log(book);
+
 }
 
-lend();
-// list all books, and see change has been made
-console.log(list());
+var x = 1;
+
+lendABook();
+// list all books,
+// console.log(list());
+

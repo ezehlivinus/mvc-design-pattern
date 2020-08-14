@@ -1,4 +1,5 @@
 const { Book } = require('../models/book');
+const { books } = require('../databases/books');
 
 /**
  * create new book
@@ -7,7 +8,11 @@ const { Book } = require('../models/book');
  */
 exports.create = (request) => {
     let {title, author, imprint } = request;
+
     const book = new Book(title, author, imprint);
+
+    books.push(book);
+
     let response = {
         status: 'success',
         data: book
@@ -22,8 +27,7 @@ exports.create = (request) => {
  * @param {*} request and object holding form/JSON data
  */
 exports.update = (book, request) => {
-    // In real world app: we may want to find the book first
-    // with a given id
+    // it is assumed that book is available and can be found in the db
     book = book.update(request);
 
     return {'status': 'success', book};
@@ -36,7 +40,7 @@ exports.update = (book, request) => {
 exports.detail = (query) => {
     let book = Book.find(query);
     // this book is just an object, but not really an 
-    // instance of a class ... let make it one so that it can hae method and class behavior
+    // instance of a class ... let make it one so that it can have method and class behavior
     let {title, author, imprint } = book;
     book = new Book(title, author, imprint);
 
@@ -52,5 +56,15 @@ exports.list = () => {
     return book;
 }
 
+// lend a book
+exports.lend = (book) => {
+    if (book.isLended) {
+        return 'This book is available';
+    }
 
+    book.isLended = true;
+
+    return book;
+
+}
 

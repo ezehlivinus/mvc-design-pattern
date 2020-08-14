@@ -1,17 +1,20 @@
 // This handles creation of a new book
-const { create } = require('../../controllers/bookController');
+const { create, list } = require('../../controllers/bookController');
 const { Book } = require('../../models/book');
 
 const newBook = () => {
     let title = 'some title';
     let author = 'authors name';
-    let imprint = 'London';
+    let imprint = 'London Imprint';
 
     const request = { title, author, imprint };
-
+    // you can create more books by calling create() 
+    // multiple time on diff object parameters
     const response =  create(request);
+
     console.log(response);
 }
 
 newBook();
+console.log(list())
 
