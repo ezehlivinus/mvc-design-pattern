@@ -1,4 +1,6 @@
 
+const { Book } = require('../models/book');
+
 let books = [
     {title: 'Things fall apart', author: 'Chinua Achebe', imprint: 'London'},
     {title: '48 Law of power', author: 'Robert Green', imprint: 'Nigeria'},
