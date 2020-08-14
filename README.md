@@ -2,6 +2,9 @@
 This is a simple demo of the Model View Controller (MVC) design pattern in vanilla javascript without using existing library or framework.
 THIS IS A DEMO AND IT IS FOR LEARNING PURPOSE ONLY and not meant for live app.
 
+## repo url
+<a href="https://github.com/ezehlivinus/mvc-design-pattern">mvc-design-patter</a>
+
 ## File Structure
 Project folder: mvc-design-pattern
 - controllers
@@ -43,3 +46,6 @@ Just make a pull request.
 
 ## Disclaimer
 Note that the data at `databases/books.js` are dummy data and not (or may not be) accurate inline with what exists out there.
+
+## Author
+<a href="https://github.com/ezehlivinus">Ezeh Livinus</a>
