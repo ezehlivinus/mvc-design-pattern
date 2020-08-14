@@ -1,6 +1,6 @@
 # mvc-design-pattern
 This is a simple demo of the Model View Controller (MVC) design pattern in vanilla javascript without using existing library or framework.
-THIS IS A DEMO AND IT IS FOR LEARNING PURPOSE ONLY.
+THIS IS A DEMO AND IT IS FOR LEARNING PURPOSE ONLY and not meant for live app.
 
 ## File Structure
 Project folder: mvc-design-pattern
@@ -22,7 +22,7 @@ Project folder: mvc-design-pattern
 Base `controller, and view` was intentionally not created. It will perhaps be created in the future.
 
 ## Usage
-0. Requirements: `node.js` installed. All script are all JS
+0. Requirements: `node.js` installed. All scripts in this project are JS. It does not require setting up a server.
 
 1. After cloning
 
@@ -42,4 +42,4 @@ It will be great if you decide to contribute to this small app and make it bette
 Just make a pull request.
 
 ## Disclaimer
-Note that the data at `databases/books.js` are dummy data and not (or may not be) accurate inline with what is exists.
+Note that the data at `databases/books.js` are dummy data and not (or may not be) accurate inline with what exists out there.
