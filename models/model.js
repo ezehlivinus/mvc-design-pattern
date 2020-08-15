@@ -15,7 +15,7 @@ class Model {
         }
     }
 
-    // other properties and methods common to all model
+    // other properties and methods common to all models
     
     /**
      * @param object the key/value pair to be updated
@@ -49,13 +49,13 @@ class Model {
 
         let collection = `${this.name.toLowerCase()}s`;
 
-        // only work for book model
+        // only work for book model, need to be optimised for other models, 
         let result = db[collection].find( ({ title }) => title.toLowerCase() === query.toLowerCase() );
         return result;
     }
 
     /**
-     * @returns all collection/table
+     * @returns all collection/table data/rows
      */
     static all () {
         let collection = `${this.name.toLowerCase()}s`;
