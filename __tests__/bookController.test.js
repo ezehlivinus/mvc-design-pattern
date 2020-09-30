@@ -46,7 +46,7 @@ describe('book controller test', () => {
 
         expect(response.book).toMatchObject(request);
 
-        expect(response.book.author).toBe(request.author);
+        expect(response.book.author).toEqual(request.author);
 
     });
 })
