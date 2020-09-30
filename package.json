@@ -1,0 +1,22 @@
+{
+  "name": "mvc-design-pattern",
+  "version": "1.0.0",
+  "description": "This is a simple demo of the Model View Controller (MVC) design pattern in vanilla javascript without using existing library or framework.\r THIS IS A DEMO AND IT IS FOR LEARNING PURPOSE ONLY and not meant for live app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config ./jest.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezehlivinus/mvc-design-pattern.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ezehlivinus/mvc-design-pattern/issues"
+  },
+  "homepage": "https://github.com/ezehlivinus/mvc-design-pattern#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
